@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// app.js
+import React from 'react';
+import ServicesPage from './ServicesPage';  // Update the path based on your project structure
 
-function App() {
+const App = () => {
+  // Dummy data for services
+  const dummyServices = [
+    {
+      _id: 1,
+      service_name: 'Web Development',
+      service_image: 'https://via.placeholder.com/300',
+      service_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      _id: 2,
+      service_name: 'Graphic Design',
+      service_image: 'https://via.placeholder.com/300',
+      service_description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+    },
+    // Add more dummy services as needed
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Other components or content can go here */}
+
+      {/* Render the ServicesPage component with dummy data */}
+      <ServicesPage services={dummyServices} />
     </div>
   );
-}
+};
 
 export default App;
